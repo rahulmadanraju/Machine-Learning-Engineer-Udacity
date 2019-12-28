@@ -6,4 +6,6 @@ The notebook and Python files provided here, once completed, result in a simple 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer---Nano-Degree---Udacity-Projects/blob/master/Sentiment_Analysis_Project/review_Result.JPG" />
 <br>
 
-
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer---Nano-Degree---Udacity-Projects/blob/master/Sentiment_Analysis_Project/reviews.JPG" />
+<br>

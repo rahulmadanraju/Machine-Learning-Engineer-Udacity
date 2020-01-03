@@ -2,7 +2,7 @@
 
 Code and associated files 
 
-This repository contains code and associated files for deploying ML models using AWS SageMaker. This repository consists of a number of tutorial notebooks for various coding exercises, mini-projects, and project files that will be used to supplement the lessons of the Nanodegree.
+This repository contains code and associated files for deploying ML models using AWS SageMaker. This repository consists of a number of project notebooks for various coding exercises, mini-projects, and project files that will be used to supplement the lessons of the Nanodegree.
 
 ## Table Of Contents
 
@@ -23,9 +23,9 @@ This repository contains code and associated files for deploying ML models using
 
 ### Project 1 - Sentiment Analysis
 
-[Sentiment Analysis Web App](https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/tree/master/Sentiment_Analysis_Project) is a notebook and collection of Python files to be completed. The result is a deployed RNN performing sentiment analysis on movie reviews complete with publicly accessible API and a simple web page which interacts with the deployed endpoint. This project assumes that you have some familiarity with SageMaker. Completing the XGBoost Sentiment Analysis notebook should suffice.
+[Sentiment Analysis Web App](https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/tree/master/Sentiment_Analysis_Project) is a notebook and collection of Python files to be completed. The result is a deployed RNN performing sentiment analysis on movie reviews complete with publicly accessible API and a simple web page which interacts with the deployed endpoint. This project assumes that you have some familiarity with SageMaker. Completing the XGBoost Sentiment Analysis notebook should suffice but also making a comparative study with LSTM model gives a description of analysis made.
 
-# Machine Learning, Deployment Case Studies with AWS SageMaker
+# Machine Learning, Deployment Case Studies
 
 This repository contains associated files for deploying ML models using AWS SageMaker. This repository consists of a number of project  notebooks for various case studies, code exercises, and project files
 

@@ -1,3 +1,17 @@
+# Machine Learning Engineer - Udacity
+
+## Syllabus
+
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer---Nano-Degree---Udacity-Projects/blob/master/Sentiment_Analysis_Project/reviews.JPG" />
+<br>
+
+
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer---Nano-Degree---Udacity-Projects/blob/master/Sentiment_Analysis_Project/reviews.JPG" />
+<br>
+
+
 # Machine Learning Deployment using AWS SageMaker
 
 Code and associated files 

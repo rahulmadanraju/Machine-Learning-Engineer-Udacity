@@ -3,12 +3,12 @@
 ## Syllabus
 
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer---Nano-Degree---Udacity-Projects/blob/master/Sentiment_Analysis_Project/reviews.JPG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/syl1.JPG" />
 <br>
 
 
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer---Nano-Degree---Udacity-Projects/blob/master/Sentiment_Analysis_Project/reviews.JPG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/syl2.JPG" />
 <br>
 
 

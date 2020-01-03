@@ -40,5 +40,4 @@ This repository contains associated files for deploying ML models using AWS Sage
 
 [Plagiarism Detector](https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/tree/master/Project_Plagiarism_Detection): Building an end-to-end plagiarism classification model. Applying the skills to clean data, extract meaningful features, and deploying a plagiarism classifier in SageMaker.
 
-![Examples of dimensionality reduction and time series prediction](./Time_Series_Forecasting/notebook_ims/example_applications.png)
 

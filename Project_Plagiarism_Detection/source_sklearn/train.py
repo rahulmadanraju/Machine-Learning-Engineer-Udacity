@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.externals import joblib
 
 ## TODO: Import any additional libraries you need to define a model
-
+from sklearn.neighbors import KNeighborsClassifier
 
 # Provided model load function
 def model_fn(model_dir):
@@ -40,6 +40,9 @@ if __name__ == '__main__':
     
     ## TODO: Add any additional arguments that you will need to pass into your model
     
+    parser.add_argument('--n_neighbors', type = int, default = 3)
+    parser.add_argument('--metric', type = str, default = 'euclidean')
+    
     # args holds all passed-in arguments
     args = parser.parse_args()
 
@@ -56,11 +59,13 @@ if __name__ == '__main__':
     
 
     ## TODO: Define a model 
-    model = None
+    '''https://towardsdatascience.com/hosting-an-scikit-learn-nearest-neighbors-model-in-aws-sagemaker-40be982da703'''
     
+    model = KNeighborsClassifier(n_neighbors = 3, metric = 'euclidean')
+    #model = LinearSVC()
     
     ## TODO: Train the model
-    
+    model.fit(train_x, train_y)
     
     
     ## --- End of your code  --- ##

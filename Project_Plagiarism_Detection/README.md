@@ -13,6 +13,10 @@ This project will be broken down into three main notebooks:
 * Explore the existing data features and the data distribution.
 * This first notebook is **not** required in your final project submission.
 
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/graphpd.JPG" />
+<br>
+
 **Notebook 2: Feature Engineering**
 
 * Clean and pre-process the text data.
@@ -20,12 +24,20 @@ This project will be broken down into three main notebooks:
 * Select "good" features, by analyzing the correlations between different features.
 * Create train/test `.csv` files that hold the relevant features and class labels for train/test data points.
 
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pddata.JPG" />
+<br>
+
 **Notebook 3: Train and Deploy Your Model in SageMaker**
 
 * Upload your train/test feature data to S3.
 * Define a binary classification model and a training script.
 * Train your model and deploy it using SageMaker.
 * Evaluate your deployed classifier.
+
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pd.JPG" />
+<br>
 
 ---
 

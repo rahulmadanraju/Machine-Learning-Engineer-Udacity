@@ -90,6 +90,7 @@ This project will be broken down into three main notebooks:
 * Train your model and deploy it using SageMaker.
 * Evaluate your deployed classifier.
 
+ Overall accuracy score:
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pd.JPG" />
 <br>

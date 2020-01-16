@@ -48,7 +48,7 @@ is a notebook that is to be completed and which leads you through the steps of c
 
 ### Project 1 - Sentiment Analysis
 
-[Sentiment Analysis Web App]
+[Sentiment Analysis Web App](https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/tree/master/Sentiment_Analysis_Project)
 is a notebook and collection of Python files to be completed. The result is a deployed RNN performing sentiment analysis on movie reviews complete with publicly accessible API and a simple web page which interacts with the deployed endpoint. This project assumes that you have some familiarity with SageMaker. Completing the XGBoost Sentiment Analysis notebook should suffice but also making a comparative study with LSTM model gives a description of analysis made.
 
 <br>

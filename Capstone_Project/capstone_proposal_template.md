@@ -48,7 +48,9 @@ The evaluation metrics that can be used to evaluate the performance of the machi
 Accuracy: The ratio of correct predictions to the total size of the data (i.e. (TP+TN)/Data Size)
 
 Confusion matrix:
+
 Recall: The ratio of true positives to the true positive and false negative (i.e. TP/(TP+FN))
+
 Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
 
 

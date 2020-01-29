@@ -32,7 +32,9 @@ It is application which can be quite handy to recognise the breeds of unknown do
 ### Datasets and Inputs
 
 Here, in the Dog Breed Classification, the dataset contains the images of Dogs and Humans. There are a total of 133 breeds, 8351 images for dogs and 13233 images for humans. Using these images as data, it has to be processed according to our needs and a model has to be designed to train our machine. 
-
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/syl1.JPG" />
+<br>
 The input to the neural net is either an image of a dog or human to which we expect the output as the breed of the dog (for dog input) or tyoe if dog the human resembles to (for a human image input). 
 
 ### Solution Statement

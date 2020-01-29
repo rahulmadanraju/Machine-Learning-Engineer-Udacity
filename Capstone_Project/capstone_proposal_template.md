@@ -31,9 +31,13 @@ It is application which can be quite handy to recognise the breeds of unknown do
 
 ### Datasets and Inputs
 
-Here, in the Dog Breed Classification, the dataset contains the images of Dogs and Humans. There are a total of 8351 images for dogs and 13233 images for humans. Using these images as data, it has to be processed according to our needs and a model has to be designed to train our machine. 
+Here, in the Dog Breed Classification, the dataset contains the images of Dogs and Humans. There are a total of 133 breeds, 8351 images for dogs and 13233 images for humans. Using these images as data, it has to be processed according to our needs and a model has to be designed to train our machine. 
 
 The input to the neural net is either an image of a dog or human to which we expect the output as the breed of the dog (for dog input) or tyoe if dog the human resembles to (for a human image input). 
+
+### Solution Statement
+
+The user end application will be designed which will be useful to identify the dog breeds. To tackle this, we need tp train our model to identiy the dog based on the certain features. The convolutional neural network can be used to train the model and based on the evaluation and performance of the model, an application will be built for the user experience.
 
 ### Benchmark Model
 
@@ -55,15 +59,17 @@ Precision: The ratio of true positives to the true positive and false positive (
 
 
 ### Project Design
+The following project can be designed according to the below workflow.
 
-In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+1. Data loading and exploration
+2. Data augmentation and processing
+3. Detect the Dog and Humans using the given detector algorithms
+4. Build a CNN training model from scratch using Deep Learning framework - Pytorch
+5. Build a training model using the Transfer Learning
+6. Evaluate the performance of the model
+7. Design and build an application using the above model for the user experience
+8. Test the working model of the application using user inputs
 
------------
+The above steps are structured for the implementation of the project and any additional steps carried will be reported after the project implementation.
 
-**Before submitting your proposal, ask yourself. . .**
-
-- Does the proposal you have written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
+-----

@@ -35,6 +35,7 @@ Here, in the Dog Breed Classification, the dataset contains the images of Dogs a
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />
+
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Alaskan_malamute_00330.jpg" />
 <br>
 The input to the neural net is either an image of a dog or human to which we expect the output as the breed of the dog (for dog input) or tyoe if dog the human resembles to (for a human image input). 

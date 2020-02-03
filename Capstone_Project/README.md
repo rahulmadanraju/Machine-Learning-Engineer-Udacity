@@ -38,7 +38,10 @@ In our case we observe that the split of train and test data is 90%-10%, i.e. 90
 From the below plot we can observe that, a total of 6680 images will be used to train our machine, to further fine tune our parameters we use an other 835 images for validating it. And, lastly, we will be using 836 images to test our models performance for various metrics.
 
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/TVT.png" />
+<br>
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
 <br>
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  

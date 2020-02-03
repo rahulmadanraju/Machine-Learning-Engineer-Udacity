@@ -56,7 +56,7 @@ On observing the distribution of data within each class, the number of images ar
 
 ### Solution Statement
 
-The user end application will be designed which will be useful to identify the dog breeds. To tackle this, we need tp train our model to identiy the dog based on the certain features. The convolutional neural network can be used to train the model and based on the evaluation and performance of the model, an application will be built for the user experience.
+The user end application will be designed which will be useful to identify the dog breeds. To tackle this, we need tp train our model to identify the dog based on the certain features. The convolutional neural network can be used to train the model and based on the evaluation and performance of the model, an application will be built for the user experience.
 
 ### Benchmark Model
 
@@ -68,7 +68,6 @@ Considering an other work perfomed on the same data, using the inception v3, the
 
 Using the above understandings, We will be using VGG16 for our data for classfying the breeds of the Dogs, Later we build a Convolutional Neural Network and tune the parameters, make a comaprative study and anlyse the performance of the model. 
 
-As observed the input is expected to be a dog image or a human image. The output is the class of breed the dog belongs, and the type of dog the human resembles.
 
 ### Evaluation Metrics
 
@@ -81,9 +80,10 @@ Confusion matrix:
 Recall: The ratio of true positives to the true positive and false negative (i.e. TP/(TP+FN))
 
 Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
-
+<br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/CF.png" /> 
-
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/CF.png" />
+<br>
 ### Project Design
 The following project can be designed according to the below workflow.
 

@@ -6,6 +6,11 @@ January 25, 2020
 ## Proposal for Capstone Project
 Dog Breed Classification
 
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Alaskan_malamute_00330.jpg" />
+<br>
+
 ### Domain Background
 
 In Dog Breed Classification, we see the dataset contains images of dogs and humans to which we have to classify dogs based on their breeds. Then why Humans? the images of the humans are used to see what category of dog breeds will they be classified (for fun purpose)
@@ -35,26 +40,34 @@ Here, in the Dog Breed Classification, the dataset contains the images of Dogs a
  
 In our case we observe that the split of train and test data is 90%-10%, i.e. 90% for training and 10% for testing purpose. In the training data we have reserved an other 10% for validation. The resultant split of data can be observed in the below graph.
 
-From the below plot we can observe that, a total of 6680 images will be used to train our machine, to further fine tune our parameters we use an other 835 images for validating it. And, lastly, we will be using 836 images to test our models performance for various metrics.
+From the below plot we can observe that, a total of 6680 images will be used to train our machine, to further fine tune our parameters we use an other 835 images for validating it. And, lastly, we will be using 836 images to test our models performance for various evaluation of metrics.
 
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/TVT.png" />
 <br>
+
+On observing the distribution of data within each class, the number of images are beyond certain threshold value (i.e. nearly 40 per class). Though the data is not distributed evenly along the graph, the number of images are sufficient to predict the class of a particular breed and look balanced.
+
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Alaskan_malamute_00330.jpg" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
 <br>
-The input to the neural net is either an image of a dog or human to which we expect the output as the breed of the dog (for dog input) or tyoe if dog the human resembles to (for a human image input). 
+
+
 
 ### Solution Statement
 
-The user end application will be designed which will be useful to identify the dog breeds. To tackle this, we need tp train our model to identiy the dog based on the certain features. The convolutional neural network can be used to train the model and based on the evaluation and performance of the model, an application will be built for the user experience.
+The user end application will be designed which will be useful to identify the dog breeds. To tackle this, we need tp train our model to identify the dog based on the certain features. The convolutional neural network can be used to train the model and based on the evaluation and performance of the model, an application will be built for the user experience.
 
 ### Benchmark Model
 
-To tackle such data, it is preferably good to go with neural networks. The extraction of features for an image data is quite tedious. However, on using the convolutional neural networks, the features are easily extracted through it. Neural nets try to find a pattern to recognise features for each category of data and classify them based on the similarity measures.
+To tackle such data, we use a benchmark model to build a basic pipeline and a well versioned model to improvise our classification rate. Such a methodology is carried to tune our model for better prediction of reults. The benchmark model helps us to make comparison and reduce the overfitting or underfitting condition and tune the model for better outcome. Logistic Regression is one such example of the bench mark. We can also us the pre defined image classifiers such as ImageNet, ResNet, VGG16, etc. to classify our images and later optimize our pipeline for better evaluation of metrics.
 
-As observed the input is expected to be a fog image or a human image. The output is the class of breed the dog belongs, and the type of dog the human resembles.
+In the works of Dog Identifcation in Kaggle, we see that "Mohamed Sheik Ibrahim" used the VGG19, a predefined base model and carried various processing techniques such as data augmentation to improvise the results obtained from the predefined model. He also used  logistic regression to classify the images of dogs and acheived an accuracy of 68%.
+
+Considering an other work perfomed on the same data, using the inception v3, the pre-trained model for image classification, Carey B achieved an accuracy of 87%, whihc is consdered to be a good classification rate based on the performance of the model. 
+
+Using the above understandings, We will be using VGG16 for our data for classfying the breeds of the Dogs, Later we build a Convolutional Neural Network and tune the parameters, make a comaprative study and anlyse the performance of the model. 
+
 
 ### Evaluation Metrics
 
@@ -67,9 +80,10 @@ Confusion matrix:
 Recall: The ratio of true positives to the true positive and false negative (i.e. TP/(TP+FN))
 
 Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
-
+<br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/CF.png" /> 
-
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/CF.png" />
+<br>
 ### Project Design
 The following project can be designed according to the below workflow.
 

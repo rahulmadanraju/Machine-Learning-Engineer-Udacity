@@ -46,13 +46,13 @@ From the below plot we can observe that, a total of 6680 images will be used to 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/TVT.png" />
 <br>
 
-On observing the distribution of data within each class, the number of images are beyond certain threshold value. Though the data is not distributed evenly along the graph, the number of images are sufficient to predict the class of a particular breed.
+On observing the distribution of data within each class, the number of images are beyond certain threshold value (i.e. nearly 40 per class). Though the data is not distributed evenly along the graph, the number of images are sufficient to predict the class of a particular breed and look balanced.
 
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
 <br>
 
-The input to the neural net is either an image of a dog or human to which we expect the output as the breed of the dog (for dog input) or tyoe if dog the human resembles to (for a human image input). 
+
 
 ### Solution Statement
 
@@ -60,9 +60,15 @@ The user end application will be designed which will be useful to identify the d
 
 ### Benchmark Model
 
-To tackle such data, it is preferably good to go with neural networks. The extraction of features for an image data is quite tedious. However, on using the convolutional neural networks, the features are easily extracted through it. Neural nets try to find a pattern to recognise features for each category of data and classify them based on the similarity measures.
+To tackle such data, we use a benchmark model to build a basic pipeline and a well versioned model to improvise our classification rate. Such a methodology is carried to tune our model for better prediction of reults. The benchmark model helps us to make comparison and reduce the overfitting or underfitting condition and tune the model for better outcome. Logistic Regression is one such example of the bench mark. We can also us the pre defined image classifiers such as ImageNet, ResNet, VGG16, etc. to classify our images and later optimize our pipeline for better evaluation of metrics.
 
-As observed the input is expected to be a fog image or a human image. The output is the class of breed the dog belongs, and the type of dog the human resembles.
+In the works of Dog Identifcation in Kaggle, we see that "Mohamed Sheik Ibrahim" used the VGG19, a predefined base model and carried various processing techniques such as data augmentation to improvise the results obtained from the predefined model. He also used  logistic regression to classify the images of dogs and acheived an accuracy of 68%.
+
+Considering an other work perfomed on the same data, using the inception v3, the pre-trained model for image classification, Carey B achieved an accuracy of 87%, whihc is consdered to be a good classification rate based on the performance of the model. 
+
+Using the above understandings, We will be using VGG16 for our data for classfying the breeds of the Dogs, Later we build a Convolutional Neural Network and tune the parameters, make a comaprative study and anlyse the performance of the model. 
+
+As observed the input is expected to be a dog image or a human image. The output is the class of breed the dog belongs, and the type of dog the human resembles.
 
 ### Evaluation Metrics
 

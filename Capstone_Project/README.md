@@ -10,6 +10,7 @@ Dog Breed Classification
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Alaskan_malamute_00330.jpg" />
 <br>
+
 ### Domain Background
 
 In Dog Breed Classification, we see the dataset contains images of dogs and humans to which we have to classify dogs based on their breeds. Then why Humans? the images of the humans are used to see what category of dog breeds will they be classified (for fun purpose)
@@ -44,6 +45,9 @@ From the below plot we can observe that, a total of 6680 images will be used to 
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/TVT.png" />
 <br>
+
+On observing the distribution of data within each class, the number of images are beyond certain threshold value. Though the data is not distributed evenly along the graph, the number of images are sufficient to predict the class of a particular breed.
+
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
 <br>

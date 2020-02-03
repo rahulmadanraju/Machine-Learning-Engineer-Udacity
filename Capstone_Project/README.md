@@ -6,6 +6,10 @@ January 25, 2020
 ## Proposal for Capstone Project
 Dog Breed Classification
 
+<br>
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Alaskan_malamute_00330.jpg" />
+<br>
 ### Domain Background
 
 In Dog Breed Classification, we see the dataset contains images of dogs and humans to which we have to classify dogs based on their breeds. Then why Humans? the images of the humans are used to see what category of dog breeds will they be classified (for fun purpose)
@@ -35,7 +39,7 @@ Here, in the Dog Breed Classification, the dataset contains the images of Dogs a
  
 In our case we observe that the split of train and test data is 90%-10%, i.e. 90% for training and 10% for testing purpose. In the training data we have reserved an other 10% for validation. The resultant split of data can be observed in the below graph.
 
-From the below plot we can observe that, a total of 6680 images will be used to train our machine, to further fine tune our parameters we use an other 835 images for validating it. And, lastly, we will be using 836 images to test our models performance for various metrics.
+From the below plot we can observe that, a total of 6680 images will be used to train our machine, to further fine tune our parameters we use an other 835 images for validating it. And, lastly, we will be using 836 images to test our models performance for various evaluation of metrics.
 
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/TVT.png" />
@@ -43,10 +47,7 @@ From the below plot we can observe that, a total of 6680 images will be used to 
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
 <br>
-<br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Alaskan_malamute_00330.jpg" />
-<br>
+
 The input to the neural net is either an image of a dog or human to which we expect the output as the breed of the dog (for dog input) or tyoe if dog the human resembles to (for a human image input). 
 
 ### Solution Statement

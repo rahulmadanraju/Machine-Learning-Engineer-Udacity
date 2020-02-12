@@ -1,5 +1,5 @@
 # Machine Learning Engineer Nanodegree
-## Capstone Proposal - Dog Breed Classification
+## Capstone Proposal - Dog Breed Classification using Transfer Learning
 Rahul Madan Raju  
 January 25, 2020
 

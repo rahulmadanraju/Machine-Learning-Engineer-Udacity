@@ -14,13 +14,13 @@ Dog Breed Classification
 ### Domain Background
 
 In Dog Breed Classification, we see the dataset contains images of dogs and humans to which we have to classify dogs based on their breeds. Then why Humans? the images of the humans are used to see what category of dog breeds will they be classified (for fun purpose)
-Also, when observed, we categorise such works to the field of Computer Vision and Machine Learning, to which there are various works carried on in the above project. 
+Also, when observed, we categorize such works to the field of Computer Vision and Machine Learning, to which there are various works carried on in the above project. 
 
-Recently in 2019, Punyanuch Borwarnginn et al proposed the work on dog breed classifcation using the different approaches to classify them based on their breeds to tackle population control, disease breakout, vaccination control and legal ownnership. He and his co workers used 1. Histogram Oriented Gradient and 2. Convolutional Neural Network using Transfer Learning for the classification purpose. On making a comparative study, they found that the Neural Nets had a better performance compared to the HOG descriptor. 
+Recently in 2019, Punyanuch Borwarnginn et al proposed the work on dog breed classification using the different approaches to classify them based on their breeds to tackle population control, disease breakout, vaccination control and legal ownership. He and his co-workers used 1. Histogram Oriented Gradient and 2. Convolutional Neural Network using Transfer Learning for the classification purpose. On making a comparative study, they found that the Neural Nets had a better performance compared to the HOG descriptor. 
 
 (### Breakthrough Conventional Based Approach for Dog Breed Classification Using CNN with Transfer Learning)
 
-Looking into the work carried above, we see how the dog breed classifcation can be used for determining various information. This can be further expanded to determine information on the 1. Types of Dog Breeds preferably chosen by humans 2. Demographic Needs for the Dogs 3. Behaviour analysis of Dogs at different demographic locations, etc.
+Looking into the work carried above, we see how the dog breed classification can be used for determining various information. This can be further expanded to determine information on the 1. Types of Dog Breeds preferably chosen by humans 2. Demographic Needs for the Dogs 3. Behavior analysis of Dogs at different demographic locations, etc.
 
 
 ### Problem Statement
@@ -28,19 +28,19 @@ Looking into the work carried above, we see how the dog breed classifcation can 
 Here the goal is to create a Dog Breed Classifier and build an application for the same. The tasks involved are:
 1. Download and Process the Images of the Dogs and Humans
 2. Detect the Dogs and Humans using the Pre-Trained models such as Haarcascade and VGG-16
-3. Build and train a classifier to calssify dog breeds from scratch
-4. Also, train the model using transfer learning with an effieciency to be used for application too.
-5. Using the App, predict the breed of the dog and also the category of dog breed the human resembles to.
+3. Build and train a classifier to classify dog breeds from scratch
+4. Also, train the model using transfer learning with an efficiency to be used for application too.
+5. Using the App, predict the breed of the dog and also the category of dog breed the human resembles.
 
-It is application which can be quite handy to recognise the breeds of unknown dogs for the user and also have fun by creating a resemblance of a dog to the given human images.
+It is an application that can be quite handy to recognize the breeds of unknown dogs for the user and also have fun by creating a resemblance of a dog to the given human images.
 
 ### Datasets and Inputs
 
 Here, in the Dog Breed Classification, the dataset contains the images of Dogs and Humans. There are a total of 133 breeds, 8351 images for dogs. Using these images as data, it has to be processed according to our needs and a model has to be designed to train our machine. 
  
-In our case we observe that the split of train and test data is 90%-10%, i.e. 90% for training and 10% for testing purpose. In the training data we have reserved an other 10% for validation. The resultant split of data can be observed in the below graph.
+In our case, we observe that the split of train and test data is 90%-10%, i.e. 90% for training and 10% for testing purposes. In the training data, we have reserved another 10% for validation. The resultant split of data can be observed in the below graph.
 
-From the below plot we can observe that, a total of 6680 images will be used to train our machine, to further fine tune our parameters we use an other 835 images for validating it. And, lastly, we will be using 836 images to test our models performance for various evaluation of metrics.
+From the below plot we can observe that a total of 6680 images will be used to train our machine, to further fine-tune the parameters we use another 835 images for validating it. And, lastly, we will be using 836 images to test our model's performance for various evaluation of metrics.
 
 <br>
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/TVT.png" />
@@ -56,18 +56,17 @@ On observing the distribution of data within each class, the number of images ar
 
 ### Solution Statement
 
-The user end application will be designed which will be useful to identify the dog breeds. To tackle this, we need tp train our model to identify the dog based on the certain features. The convolutional neural network can be used to train the model and based on the evaluation and performance of the model, an application will be built for the user experience.
+The user end application will be designed which will be useful to identify the dog breeds. To tackle this, we need to train our model to identify the dog based on certain features. The convolutional neural network can be used to train the model and based on the evaluation and performance of the model, an application will be built for the user experience.
 
 ### Benchmark Model
 
-To tackle such data, we use a benchmark model to build a basic pipeline and a well versioned model to improvise our classification rate. Such a methodology is carried to tune our model for better prediction of reults. The benchmark model helps us to make comparison and reduce the overfitting or underfitting condition and tune the model for better outcome. Logistic Regression is one such example of the bench mark. We can also us the pre defined image classifiers such as ImageNet, ResNet, VGG16, etc. to classify our images and later optimize our pipeline for better evaluation of metrics.
+To tackle such data, we use a benchmark model to build a basic pipeline and a well-versioned model to improvise our classification rate. Such a methodology is carried to tune our model for better prediction of results. The benchmark model helps us to make a comparison and reduce the overfitting or underfitting condition and tune the model for a better outcome. Logistic Regression is one such example of the benchmark. We can also use the predefined image classifiers such as ImageNet, ResNet, VGG16, etc. to classify our images and later optimize our pipeline for better evaluation of metrics.
 
-In the works of Dog Identifcation in Kaggle, we see that "Mohamed Sheik Ibrahim" used the VGG19, a predefined base model and carried various processing techniques such as data augmentation to improvise the results obtained from the predefined model. He also used  logistic regression to classify the images of dogs and acheived an accuracy of 68%.
+In the works of Dog Identification in Kaggle, we see that "Mohamed Sheik Ibrahim" used the VGG19, a predefined base model and carried various processing techniques such as data augmentation to improvise the results obtained from the predefined model. He also used logistic regression to classify the images of dogs and achieved an accuracy of 68%.
 
-Considering an other work perfomed on the same data, using the inception v3, the pre-trained model for image classification, Carey B achieved an accuracy of 87%, whihc is consdered to be a good classification rate based on the performance of the model. 
+Considering another work performed on the same data, using the inception v3, the pre-trained model for image classification, Carey B achieved an accuracy of 87%, which is considered to be a good classification rate based on the performance of the model. 
 
-Using the above understandings, We will be using VGG16 for our data for classfying the breeds of the Dogs, Later we build a Convolutional Neural Network and tune the parameters, make a comaprative study and anlyse the performance of the model. 
-
+Using the above understandings, We will be using VGG16 for our data for classifying the breeds of the Dogs, Later we build a Convolutional Neural Network and tune the parameters, make a comparative study and analyse the performance of the model. 
 
 ### Evaluation Metrics
 

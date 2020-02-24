@@ -99,6 +99,7 @@ The above steps are structured for the implementation of the project and any add
 
 ## Results
 
+The output meets the requirement of the task with a prediction accuracy of **85%**
 The result of the above implementation is shown below - 
 <p align="center"> 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/1.PNG" />

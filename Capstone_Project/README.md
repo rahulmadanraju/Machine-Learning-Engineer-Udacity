@@ -97,4 +97,12 @@ The following project can be designed according to the below workflow.
 
 The above steps are structured for the implementation of the project and any additional steps carried will be reported after the project implementation.
 
------
+----------------------------------------------------------------------------------------------------------------------------------------
+
+## Results
+
+The result of the above implementation is shown below - 
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/1.png" /> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/2.png" />
+<p>

@@ -6,10 +6,10 @@ January 25, 2020
 ## Proposal for Capstone Project
 Dog Breed Classification
 
-<br>
+<p align="center"> 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/Beagle_01197.jpg" />  
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/Alaskan_malamute_00330.jpg" />
-<br>
+<p>
 
 ### Domain Background
 

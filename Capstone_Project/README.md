@@ -101,6 +101,10 @@ The above steps are structured for the implementation of the project and any add
 
 Detection algorithm comparison: Haarcascades vs Local Binary Pattern (LBP) cascades
 
+Pre-trained model: VGG 16
+
+Custom model accuracy: 12%
+
 The output meets the requirement of the task with a prediction accuracy of **85%**.
 
 The result of the above implementation is shown below - 

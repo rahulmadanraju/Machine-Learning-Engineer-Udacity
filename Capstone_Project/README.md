@@ -7,8 +7,8 @@ January 25, 2020
 Dog Breed Classification
 
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Beagle_01197.jpg" />  
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/Alaskan_malamute_00330.jpg" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/Beagle_01197.jpg" />  
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/Alaskan_malamute_00330.jpg" />
 <br>
 
 ### Domain Background
@@ -80,7 +80,7 @@ Recall: The ratio of true positives to the true positive and false negative (i.e
 
 Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images/CF.png" /> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/ImagesReport/CF.png" /> 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
 <br>
 ### Project Design

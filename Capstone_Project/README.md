@@ -84,6 +84,7 @@ Precision: The ratio of true positives to the true positive and false positive (
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
 <p>
 ### Project Design
+ 
 The following project can be designed according to the below workflow.
 
 1. Data loading and exploration

@@ -79,10 +79,10 @@ Confusion matrix:
 Recall: The ratio of true positives to the true positive and false negative (i.e. TP/(TP+FN))
 
 Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
-<br>
+<p align="center"> 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/CF.png" /> 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
-<br>
+<p>
 ### Project Design
 The following project can be designed according to the below workflow.
 

@@ -97,12 +97,28 @@ The following project can be designed according to the below workflow.
 
 The above steps are structured for the implementation of the project and any additional steps carried will be reported after the project implementation.
 
-----------------------------------------------------------------------------------------------------------------------------------------
-
 ## Results
+
+Detection algorithm comparison: Haarcascades vs Local Binary Pattern (LBP) cascades
+
+Pre-trained model: VGG 16
+
+Custom model accuracy: 12%
+
+The output meets the requirement of the task with a prediction accuracy of **85%**.
 
 The result of the above implementation is shown below - 
 <p align="center"> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/tree/master/Capstone_Project/Images_Report/1.jpg" /> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images_Report/2.jpg" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/1.PNG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/2.PNG" />
 <p>
+
+## References
+
+https://towardsdatascience.com/transfer-learning-with-convolutional-neural-networks-in-pytorch-dd09190245ce
+
+https://discuss.pytorch.org/t/transfer-learning-using-vgg16/20653
+
+https://discuss.pytorch.org/t/questions-about-imagefolder/774/5
+
+https://towardsdatascience.com/a-beginners-tutorial-on-building-an-ai-image-classifier-using-pytorch-6f85cb69cba7

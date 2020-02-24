@@ -13,8 +13,13 @@ Some of the examples of classification using machine learning are:
 - Sign Language Indentification
 - Speech Recognition
 - Object Classification
-  
+
 Here, we will be discussing about: Dog Breed Classification
+
+### Project Overview
+In this section, look to provide a high-level overview of the project in layman’s terms. Questions to ask yourself when writing this section:
+- _Has an overview of the project been provided, such as the problem domain, project origin, and related datasets or input data?_
+- _Has enough background information been given so that an uninformed reader would understand the problem domain and following problem statement?_
  
 In Dog Breed Classification, we will be classifying dogs based on their breeds. 
 
@@ -35,23 +40,37 @@ Recently in 2019, Punyanuch Borwarnginn et al proposed the work on dog breed cla
 
 On making a comparative study, they found that the Neural Nets had a better performance compared to the HOG descriptor.
 
-
-
-### Project Overview
-In this section, look to provide a high-level overview of the project in layman’s terms. Questions to ask yourself when writing this section:
-- _Has an overview of the project been provided, such as the problem domain, project origin, and related datasets or input data?_
-- _Has enough background information been given so that an uninformed reader would understand the problem domain and following problem statement?_
-
 ### Problem Statement
 In this section, you will want to clearly define the problem that you are trying to solve, including the strategy (outline of tasks) you will use to achieve the desired solution. You should also thoroughly discuss what the intended solution will be for this problem. Questions to ask yourself when writing this section:
 - _Is the problem statement clearly defined? Will the reader understand what you are expecting to solve?_
 - _Have you thoroughly discussed how you will attempt to solve the problem?_
 - _Is an anticipated solution clearly defined? Will the reader understand what results you are looking for?_
 
+Here the goal is to create a Dog Breed Classifier and build an application for the same. The tasks involved are:
+- Download and process the Images of the Dogs and Humans
+- Detect the Dogs and Humans using the detector algorithms such as haarcascades and local binary pattern cascades
+- Build and train a classifier to classify dog breeds using a pre-trained model (VGG-16 or RESTNET50) and custom model
+- Also, train the model using transfer learning with an efficiency to be used for application
+- Using the App, predict the breed of the dog and also the category of dog breed the human resembles
+
+It is an application that can be quite handy to recognize the breeds of unknown dogs for the user and also have fun by creating a resemblance of a dog to the given human image
+
 ### Metrics
 In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
 - _Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?_
 - _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
+
+The evaluation metrics that can be used to evaluate the performance of the machine learning models are:
+- Accuracy: The ratio of correct predictions to the total size of the data (i.e. (TP+TN)/Data Size)
+- Recall: The ratio of true positives to the true positive and false negative (i.e. TP/(TP+FN))
+- Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
+
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/CF.png" /> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
+<p>
+  
+In our case we will be using the accuracy as the metric of measurement to evaluate the performance of the model.
 
 
 ## II. Analysis

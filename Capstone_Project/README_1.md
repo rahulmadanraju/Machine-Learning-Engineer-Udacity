@@ -140,7 +140,7 @@ In this section, all of your preprocessing steps will need to be clearly documen
 In the pre-processing part we will be doing following:
 
 - As the size/resolution of the images remain different we need to resize the images to the same scale. Therefore, studying the input requirements of the VGG-16, we know that it requires an image of the size 224. As the reason we are resizing the images of the data to 255 along with a center crop of 224 as needed fr VGG16.
-- Also, as mentioned above, we will augment the data to increase the number of images. In data augmentation, we will be increasing the number of images through transformations of the image. The transformations such as rotation, translation, etc are performed so that the number of images are increase.
+- Also, as mentioned above, we will augment the data to increase the number of images. In data augmentation, we will be increasing the number of images through transformations of the image. The transformations such as rotation, translation, etc are performed so that the number of images are increased.
 
 
 

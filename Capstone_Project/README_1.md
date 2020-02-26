@@ -97,7 +97,7 @@ In this section, you will need to discuss the algorithms and techniques you inte
 
 From exploring the data, we visualize the actual distribution of data in each class. In order to classify the images based on their breeds, we need a classification algorithm to do the work. In this case, we use the pre-trained model such as VGG16 and a custom model for classification purpose. The intention of using the VGG16 is the need of performing transfer learning to our self built custom algorithm.
 
-VGG-16 Algorithm Model
+#### VGG-16 Algorithm Model
 
 VGG 16 is a type of Convolutional Neural Network trained on a dataset of over 14 million images belonging to 1000 classes. The algorithm was proposed by K. Simonyan and A. Zisserman in the paper “Very Deep Convolutional Networks for Large-Scale Image Recognition”. The network consists of:
 - A stack of convolutional layers 
@@ -115,7 +115,7 @@ Some of the drawbacks of the VG166 are:
   - It is slow to train
   - The network architecture weights themselves are quite large
   
-Custom Built Algorithm Model
+#### Custom Built Algorithm Model
  
 Based on the design of VGG16, we build our model on similar terms. In our model we have:
 - Five convolutional layers 

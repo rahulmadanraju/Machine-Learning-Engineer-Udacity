@@ -8,7 +8,7 @@
 
 
 <br>
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/syl2.JPG", width="48" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/syl2.JPG" />
 <br>
 
 

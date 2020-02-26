@@ -113,10 +113,11 @@ Some of the drawbacks of the VG166 are:
   - It is slow to train
   - The network architecture weights themselves are quite large
   
- Custom Built Algorithm Model
+Custom Built Algorithm Model
  
-Based on the design of VGG16, we build our model on similar terms. In our model we have 5 convolutional layers followed by the 3 fully connected layers. In our algorithm we use the relu as the activation function and a pooling layer to reduce the dimension of the image data. In the first FCN there are 25088 channels which is converging to 133 in the third FCN. Where 133 belongs to the number of classes from the last fully connected network. We also have dropout layers in our model to make sure the model does not get into overfit condition. 
-  
+Based on the design of VGG16, we build our model on similar terms. In our model we have 5 convolutional layers followed by the 3 fully connected layers. In our algorithm we use the relu as the activation function and a pooling layer to reduce the dimension of the image data. In the first FCN there are 25088 channels which is converging to 133 in the third FCN. Where 133 belongs to the number of classes from the last fully connected network. We also have dropout layers in our model to make sure the model does not get into overfit condition.
+
+
 ### Benchmark
 
 To tackle such data, we use a benchmark model to build a basic pipeline and a well-versioned model to improvise our classification rate. Such a methodology is carried to tune our model for better prediction of results. The benchmark model helps us to make a comparison and reduce the overfitting or underfitting condition and tune the model for a better outcome. Logistic Regression, KNN are such examples of the benchmark. We can also use the predefined image classifiers such as ImageNet, ResNet, VGG16, etc. to classify our images and later optimize our pipeline for better evaluation of metrics.
@@ -144,6 +145,8 @@ In this section, the process for which metrics, algorithms, and techniques that 
 - _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
 - _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
 - _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
+
+
 
 ### Refinement
 In this section, you will need to discuss the process of improvement you made upon the algorithms and techniques you used in your implementation. For example, adjusting parameters for certain models to acquire improved solutions would fall under the refinement category. Your initial and final solutions should be reported, as well as any significant intermediate results as necessary. Questions to ask yourself when writing this section:

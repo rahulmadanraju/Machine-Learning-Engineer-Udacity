@@ -108,6 +108,8 @@ VGG 16 is a type of Convolutional Neural Network trained on a dataset of over 14
 <p align="center"> >
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/VGG16.jpg" />
 <p>
+ 
+Looking onto the diagram above, we see the input size required for the model is 224x224. Therefore our model should be resized to 224 to pass in the image as input to the model of VGG-16. 
   
 Some of the drawbacks of the VG166 are:
   - It is slow to train
@@ -115,8 +117,13 @@ Some of the drawbacks of the VG166 are:
   
 Custom Built Algorithm Model
  
-Based on the design of VGG16, we build our model on similar terms. In our model we have 5 convolutional layers followed by the 3 fully connected layers. In our algorithm we use the relu as the activation function and a pooling layer to reduce the dimension of the image data. In the first FCN there are 25088 channels which is converging to 133 in the third FCN. Where 133 belongs to the number of classes from the last fully connected network. We also have dropout layers in our model to make sure the model does not get into overfit condition.
+Based on the design of VGG16, we build our model on similar terms. In our model we have:
+- Five convolutional layers 
+- Followed by the three fully connected layers
+- A pooling layer
+- Lastly the dropout layers
 
+In our algorithm we use the relu as the activation function and a pooling layer to reduce the dimension of the image data. In the first FCN there are 25088 channels which is converging to 133 in the third FCN. Where 133 belongs to the number of classes from the last fully connected network. We also have dropout layers in our model to make sure the model does not get into overfit condition.
 
 ### Benchmark
 

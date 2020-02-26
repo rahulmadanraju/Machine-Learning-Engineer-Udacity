@@ -154,7 +154,7 @@ In this section, the process for which metrics, algorithms, and techniques that 
 
 As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification.
 
-Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as th input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range belonging to the certain class.
+Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as th input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range from (151-268) belonging to the certain class.
 
 Keeping the pre-trained model ready, we now bulid our custom model as explained in the algorithm section.
 

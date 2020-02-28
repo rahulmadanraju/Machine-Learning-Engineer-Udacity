@@ -161,7 +161,7 @@ The rotation of image is made to certain angle of 10 degrees and some images are
 In our case, we are also normalizing the images to a certain range. The normalization is carried to reduce the skewness or varied range of dimensions of images to the fixed range in the model and also helping it to learn faster. Since we are using the color images which are having three channels, therefore we need a tuple to each channel to carry the normalization. We use the relevant normalization parameters as shown below.
 
 <p align="center"> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/normalize.PNG" />
 <p>
 
 The formula for normalization for each channel is given by: 
@@ -170,7 +170,11 @@ image = (image - mean) / std
 
 Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as the input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range from (151-268) belonging to the certain class. 
 
-The model is evlauated by passing a data of dog and it is seen that the model predicts the output in the given category i.e. 243, which lies in between 151-268. 
+The model is evlauated by passing a data of dog and it is seen that the model predicts the output in the given category i.e. 243, which lies in between 151-268. The respective predict function performed by the VGG16 is gven below:
+
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/VGGPredict.PNG" />
+<p>
 
 Keeping the pre-trained model ready, we now bulid our custom model as explained in the algorithm section.
 

@@ -126,6 +126,8 @@ Based on the design of VGG16, we build our model on similar terms. In our model 
 
 In our algorithm we use the relu as the activation function and a pooling layer to reduce the dimension of the image data. In the first FCN there are 25088 channels which is converging to 133 in the third FCN. Where 133 belongs to the number of classes from the last fully connected network. We also have dropout layers in our model to make sure the model does not get into overfit condition.
 
+In order to evaluate the performance of the above model, we verify it trough transfer learning and compare with the other benchmark works carried before. The benchmark works carried out in this field is discussed in detail at the benchmark section below.
+
 ### Benchmark
 
 To tackle such data, we use a benchmark model to build a basic pipeline and a well-versioned model to improvise our classification rate. Such a methodology is carried to tune our model for better prediction of results. The benchmark model helps us to make a comparison and reduce the overfitting or underfitting condition and tune the model for a better outcome. Logistic Regression, KNN are such examples of the benchmark. We can also use the predefined image classifiers such as ImageNet, ResNet, VGG16, etc. to classify our images and later optimize our pipeline for better evaluation of metrics.
@@ -152,9 +154,23 @@ In this section, the process for which metrics, algorithms, and techniques that 
 - _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
 - _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
 
-As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification.
+As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification. The input image is resized to needed dimension of VGG16 and also augmented for custom model using the augmentation techniques such as rotation and flip. 
 
-Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as th input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range from (151-268) belonging to the certain class.
+The rotation of image is made to certain angle of 10 degrees and some images are flipped to increase the number of images in the dataset. Also the image is center cropped to the required dimension in order keep the relevant information and discard the irrelevant ones.
+
+In our case, we are also normalizing the images to a certain range. The normalization is carried to reduce the skewness or varied range of dimensions of images to the fixed range in the model and also helping it to learn faster. Since we are using the color images which are having three channels, therefore we need a tuple to each channel to carry the normalization. We use the relevant normalization parameters as shown below.
+
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
+<p>
+
+The formula for normalization for each channel is given by: 
+
+image = (image - mean) / std
+
+Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as the input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range from (151-268) belonging to the certain class. 
+
+The model is evlauated by passing a data of dog and it is seen that the model predicts the output in the given category i.e. 243, which lies in between 151-268. 
 
 Keeping the pre-trained model ready, we now bulid our custom model as explained in the algorithm section.
 

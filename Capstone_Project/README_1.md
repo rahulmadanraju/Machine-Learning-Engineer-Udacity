@@ -154,9 +154,7 @@ In this section, the process for which metrics, algorithms, and techniques that 
 - _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
 - _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
 
-As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification. The input image is resized to needed dimension of VGG16 and also augmented for custom model using the augmentation techniques such as rotation and flip. 
-
-The rotation of image is made to certain angle of 10 degrees and some images are flipped to increase the number of images in the dataset. Also the image is center cropped to the required dimension in order keep the relevant information and discard the irrelevant ones.
+As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification. The input image is resized to needed dimension of VGG16. Also, the image is center cropped to the required dimension in order keep the relevant information and discard the irrelevant ones.
 
 In our case, we are also normalizing the images to a certain range. The normalization is carried to reduce the skewness or varied range of dimensions of images to the fixed range in the model and also helping it to learn faster. Since we are using the color images which are having three channels, therefore we need a tuple to each channel to carry the normalization. We use the relevant normalization parameters as shown below.
 
@@ -175,8 +173,41 @@ The model is evlauated by passing a data of dog and it is seen that the model pr
 <p align="center"> 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/VGGPredict.PNG" />
 <p>
+  
+We see the implementation carried for a single data of dog. However we need to verify if the predicted output is correct. Therefore hte dog detector function created uses the VGG16 model to predict and test if the predicted answer is right or wrong. The function is implemented on 100 images of dog and human data. Based on the results we see that:
+  
+  - Total number of dog faces detected in human data:  2
+  - Total number of dog faces detected in dog data:  100
+  
+ The result shows that the function is carried in a proper sense to evaluate the predict function of VGG 16 as required for our purpose.
+ 
+Therefore, now we are able to predict the dog and human from the images. However, we need to predict the breed of the data given, as the reason we need to build the custom model to predict the breed of the data given.
 
 Keeping the pre-trained model ready, we now bulid our custom model as explained in the algorithm section.
+
+As the data is split for train, validation and test. We need to load the respective data accordingly. Based on the requirement as mentioned above, we will augmenting the data in this case along with other preprocessing techniques. 
+ 
+The training data is augmented for the custom model using the augmentation techniques such as rotation and flip. The rotation of image is made to certain angle of 10 degrees and images are flipped horizontally to increase the number of images in the dataset for the training purpose. 
+
+The architecture for the custom model is built and implemented as under:
+
+- A total of 5 convolutional layers are used with a kernel size of 3 and padding equal to 1. The convolutional layers are necesseray to extract the low level features from the images.
+- The Max Pooling layers is used to downsize the spatial dimension, reduce the computations and remove the un-necessary information from the images.
+- 3 fully connected layers are used as decision making layers for classification purpose. They take in a total of 25088 features and downsize it to 133 classes of dog breeds
+- a single layer of dropout is used as to make sure the model is not getting overfitted on training it.
+- Setting the loss function to cross entropy and optimizer to Stochastic Gradient Descent 
+
+Therefore for every convolutional we have the pooling performed to downsize and also dropout for every fully connected layer to prevent the model from overfitting condition. From the lst Fully connected network we have output of 133 which is the class breeds of the dog.
+
+The train function being designed plays a vital role to train the custom model for classification purpose. Within the train function we carry following operations:
+- make use of the GPU to carry the work at a much faster pace. 
+- evaluate the training loss
+- evaluate the validation loss
+
+Setting the parameters of the train functin we will train the custom model using the training data of dog images. The epoch is set to 25 and the training is carried out on the custom model.
+
+
+
 
 ---
 

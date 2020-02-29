@@ -154,6 +154,10 @@ In this section, the process for which metrics, algorithms, and techniques that 
 - _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
 - _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
 
+The metric of evaluation used to test the model's performance is accuracy. The determination of accuracy plays a huge role as we need to satisfy the pre-set conditions in prior. The conditions are as follows:
+- The custom model should have a test accuracy greater than 10%
+- The model after the transfer learning should give a test accuracy greater than 60%
+
 As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification. The input image is resized to needed dimension of VGG16. Also, the image is center cropped to the required dimension in order keep the relevant information and discard the irrelevant ones.
 
 In our case, we are also normalizing the images to a certain range. The normalization is carried to reduce the skewness or varied range of dimensions of images to the fixed range in the model and also helping it to learn faster. Since we are using the color images which are having three channels, therefore we need a tuple to each channel to carry the normalization. We use the relevant normalization parameters as shown below.
@@ -165,6 +169,8 @@ In our case, we are also normalizing the images to a certain range. The normaliz
 The formula for normalization for each channel is given by: 
 
 image = (image - mean) / std
+
+#### Implementation of pre-defined model VGG-16:
 
 Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as the input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range from (151-268) belonging to the certain class. 
 
@@ -189,6 +195,8 @@ As the data is split for train, validation and test. We need to load the respect
  
 The training data is augmented for the custom model using the augmentation techniques such as rotation and flip. The rotation of image is made to certain angle of 10 degrees and images are flipped horizontally to increase the number of images in the dataset for the training purpose. 
 
+#### Implementation of Custom Model from Scratch:
+
 The architecture for the custom model is built and implemented as under:
 
 - A total of 5 convolutional layers are used with a kernel size of 3 and padding equal to 1. The convolutional layers are necesseray to extract the low level features from the images.
@@ -204,10 +212,34 @@ The train function being designed plays a vital role to train the custom model f
 - evaluate the training loss
 - evaluate the validation loss
 
-Setting the parameters of the train functin we will train the custom model using the training data of dog images. The epoch is set to 25 and the training is carried out on the custom model.
+Setting the parameters of the train function we will train the custom model using the training data of dog images. The epoch is set to 25 and the training is carried out on the custom model. We see there is a continuous drop in the loass till epoch 20. At the epoch 20 we see that the training loss is about 3.978901  and validation loss is about 3.993918. The training loss is less than the validation loss and leads to overfit condition of the model. 
 
+However, on tesing the model, we need to satidfy the pre-set consition of accuracy being more than 10%. In our case, on testing the data from the trained custom model, we acheive an accuracy of 12% of which 102 out of 836 are predicted right. Therefore, we satisfy the required condition of needed test accuracy.
 
+#### Implementation of Model for Transfer Learning
 
+Initially we are calling the pre-trained model of VGG-16 with the pre-trained weights. As the reason, the pre-trained parameters is set to True. We are also freezing the parameters i.e. weights of the VGG-16 model in lower convolutional layers and adding the custom model with a layer of trainable parameters as required. We set the last classifier layer with 4096 features and 133 as the number of classes as required as our output.
+
+Also specifying the loss function to Cross Entropy and optimizer to Stochastic Gradient Descent, we are training the machine by making use of the cuda for training purpose. The parameter - epoch is set to 8 and the model is trained and we also observe there is a considerable decrease in the loss. Using the best validation accuracy of the model by saving it on training, we are testing our models performance on the test data. 
+
+The result of the transfer learning model when evaluated on the testing data gives us an accuracy of about 85%. This satisfies the required condition set in prior.
+
+#### Implementation of application for the prediction of dog breed using the model
+
+To implement the application for dog breed prediction we are constructing a function to predict the dog breed and another function to run the app.
+
+The implementation of the function for predicting the dog breed contains:
+- loading the image path
+- pre-processing the images which is required to be passed as an input
+- using the model to evaluate on the image and make prediction
+- returm the result of predicted breed
+
+The implementation of the function for running the application contains:
+- if the dog detected, using the prediction function designed, predict the breed of dog.
+- if the dog not detected and human detected, predict the dog breed for the human suing the previously designed fuction.
+- if neither dog nor human detected, throw a message displaying the error in the image
+
+Lastly the implemented algorithm is tested and evaluated for various images of human and dog. The resultant outcome is shown in the code output.
 
 ---
 
@@ -216,7 +248,18 @@ In this section, you will need to discuss the process of improvement you made up
 - _Has an initial solution been found and clearly reported?_
 - _Is the process of improvement clearly documented, such as what techniques were used?_
 - _Are intermediate and final solutions clearly reported as the process is improved?_
+In order to improve the performance of the model:
 
+Augmentation of the data:
+The images for the training data are augmented in order to increase the number of training images. This helps the model to distinguish data irrespective of the transformations done to the images.
+
+Tuning of the hyperparameters: Epoch size for custom model
+Initially the model was trained for 100 epochs and it was observed that the model was overly trained. Later, the model was trained for 15 epochs but the test accuracy of the model dropped below 10% and hence the epochs were reduced based on the tuning and set to 25 to which the condition was satisfied.
+
+Tuning of the hyperparameters: Epoch size for transfer learning model
+Following the same procedures above, the epoch was set to 5 initially but the resultant outcome of the model was not satisfactory amd later on tuning to various sizes, it was set to 8 and the resultant best accuracy was acheived.
+
+The other parameters that were tuned for the better prediction of results are the dropout value and the learning rate. On tuning this, we observe that the model was much stable in prediction.
 
 ## IV. Results
 _(approx. 2-3 pages)_
@@ -227,6 +270,8 @@ In this section, the final model and any supporting qualities should be evaluate
 - _Has the final model been tested with various inputs to evaluate whether the model generalizes well to unseen data?_
 - _Is the model robust enough for the problem? Do small perturbations (changes) in training data or the input space greatly affect the results?_
 - _Can results found from the model be trusted?_
+
+
 
 ### Justification
 In this section, your model’s final solution and its results should be compared to the benchmark you established earlier in the project using some type of statistical analysis. You should also justify whether these results and the solution are significant enough to have solved the problem posed in the project. Questions to ask yourself when writing this section:

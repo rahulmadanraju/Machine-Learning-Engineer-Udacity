@@ -273,6 +273,13 @@ In this section, the final model and any supporting qualities should be evaluate
 
 
 
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/1.PNG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/2.PNG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/3.PNG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/4.PNG" />
+<p>
+
 ### Justification
 In this section, your model’s final solution and its results should be compared to the benchmark you established earlier in the project using some type of statistical analysis. You should also justify whether these results and the solution are significant enough to have solved the problem posed in the project. Questions to ask yourself when writing this section:
 - _Are the final results found stronger than the benchmark result reported earlier?_
@@ -291,10 +298,8 @@ In the implementation phase, we implement the pre-trained model, custom model an
 
 In the transfer learning, we see the involvement of custom model with the pre-defined model and training it for the whole data and see a significant rise in the accuracy level to an output of 85% in test accuracy. On making the comparative study with the benchmark model, we see our model has outperformed the benchmark and also satisfying the conditon of above 60% accuracy. 
 
-<p align="center"> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/1.PNG" />
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/2.PNG" />
-<p>
+
+### Improvement
 
 Further, the project work can be improvised by using the follosing impovisations. 
 
@@ -309,33 +314,14 @@ Further, the project work can be improvised by using the follosing impovisations
 - Lastly, tuning the architectural factors can also be considered for the improvisation of model's performance.
 
 
-### Free-Form Visualization
-In this section, you will need to provide some form of visualization that emphasizes an important quality about the project. It is much more free-form, but should reasonably support a significant result or characteristic about the problem that you want to discuss. Questions to ask yourself when writing this section:
-- _Have you visualized a relevant or important quality about the problem, dataset, input data, or results?_
-- _Is the visualization thoroughly analyzed and discussed?_
-- _If a plot is provided, are the axes, title, and datum clearly defined?_
-
-### Reflection
-In this section, you will summarize the entire end-to-end problem solution and discuss one or two particular aspects of the project you found interesting or difficult. You are expected to reflect on the project as a whole to show that you have a firm understanding of the entire process employed in your work. Questions to ask yourself when writing this section:
-- _Have you thoroughly summarized the entire process you used for this project?_
-- _Were there any interesting aspects of the project?_
-- _Were there any difficult aspects of the project?_
-- _Does the final model and solution fit your expectations for the problem, and should it be used in a general setting to solve these types of problems?_
-
-### Improvement
-In this section, you will need to provide discussion as to how one aspect of the implementation you designed could be improved. As an example, consider ways your implementation can be made more general, and what would need to be modified. You do not need to make this improvement, but the potential solutions resulting from these changes are considered and compared/contrasted to your current solution. Questions to ask yourself when writing this section:
-- _Are there further improvements that could be made on the algorithms or techniques you used in this project?_
-- _Were there algorithms or techniques you researched that you did not know how to implement, but would consider using if you knew how?_
-- _If you used your final solution as the new benchmark, do you think an even better solution exists?_
-
 -----------
 
-**Before submitting, ask yourself. . .**
+### References
 
-- Does the project report you’ve written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Analysis** and **Methodology**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your analysis, methods, and results?
-- Have you properly proof-read your project report to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
-- Is the code that implements your solution easily readable and properly commented?
-- Does the code execute without error and produce results similar to those reported?
+https://towardsdatascience.com/transfer-learning-with-convolutional-neural-networks-in-pytorch-dd09190245ce
+
+https://discuss.pytorch.org/t/transfer-learning-using-vgg16/20653
+
+https://discuss.pytorch.org/t/questions-about-imagefolder/774/5
+
+https://towardsdatascience.com/a-beginners-tutorial-on-building-an-ai-image-classifier-using-pytorch-6f85cb69cba7

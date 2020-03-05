@@ -233,8 +233,6 @@ The implementation of the function for running the application contains:
 
 Lastly, the implemented algorithm is tested and evaluated for various images of humans and dogs. The resultant outcome is shown in the code output.
 
----
-
 ### Refinement
 
 Augmentation of the data:

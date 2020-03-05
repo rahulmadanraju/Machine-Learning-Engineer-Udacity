@@ -291,7 +291,22 @@ In the implementation phase, we implement the pre-trained model, custom model an
 
 In the transfer learning, we see the involvement of custom model with the pre-defined model and training it for the whole data and see a significant rise in the accuracy level to an output of 85% in test accuracy. On making the comparative study with the benchmark model, we see our model has outperformed the benchmark and also satisfying the conditon of above 60% accuracy. 
 
-Further, the project work can be improvised by using the follosing impovisations. Firstly, an advanced detection algorithm can be used which are having better precision such as ..........
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/1.PNG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/2.PNG" />
+<p>
+
+Further, the project work can be improvised by using the follosing impovisations. 
+
+- Firstly, an advanced detection algorithm can be used which are having better precision such as MTCNN face detection algorithm. 
+
+- Secondly, The task becomes much tedious and difficult to classify the images that contains both dogs and humans, therefore the alogorithm can be improvised on such dataset. 
+
+- Thirdly, a real-time application can be acheived on the production scale where when the user passes an input image, we can predict the put of the image in real time using the API. 
+
+- Fourthly, as the classification rate depends on the pre-trained models-preferring a better pre-trained model, will have a good chance in imporovising our prediction rate of the model. 
+
+- Lastly, tuning the architectural factors can also be considered for the improvisation of model's performance.
 
 
 ### Free-Form Visualization

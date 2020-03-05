@@ -4,17 +4,16 @@ Rahul Madan Raju
 February , 2020
 
 ## I. Definition
-_(approx. 1-2 pages)_
 
-Classification is the process of the classifying things based on similarity of features. It is a supervised learning approach in which the computer program learns from the data input given to it and then uses this learning to classify new observation. Classification is one of the several methods intended to make the analysis of very large datasets effective.
+Classification is the process of classifying things based on the similarity of features. It is a supervised learning approach in which the computer program learns from the data input given to it and then uses this learning to classify new observations. Classification is one of the several methods intended to make the analysis of very large datasets effective.
 
 Some of the examples of classification using machine learning are:
 
-- Sign Language Indentification
+- Sign Language Identification
 - Speech Recognition
 - Object Classification
 
-Here, we will be discussing about: Dog Breed Classification
+Here, we will be discussing: Dog Breed Classification
 
 ### Project Overview
 
@@ -41,7 +40,7 @@ On making a comparative study, they found that the Neural Nets had a better perf
 
 Here the goal is to create a Dog Breed Classifier and build an application for the same. The tasks involved are:
 - Download and process the Images of the Dogs and Humans
-- Detect the Dogs and Humans using the detector algorithms such as haarcascades and local binary pattern cascades
+- Detect the Dogs and Humans using the detector algorithms such as haar cascades and local binary pattern cascades
 - Build and train a classifier to classify dog breeds using a pre-trained model (VGG-16 or RESTNET50) and custom model
 - Also, train the model using transfer learning with an efficiency to be used for application
 - Using the App, predict the breed of the dog and also the category of dog breed the human resembles
@@ -60,10 +59,9 @@ The evaluation metrics that can be used to evaluate the performance of the machi
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
 <p>
   
-In our case we will be using the accuracy as the metric of measurement to evaluate the performance of the model.
+In our case, we will be using the accuracy as the metric of measurement to evaluate the performance of the model.
 
 ## II. Analysis
-_(approx. 2-4 pages)_
 
 ### Data Exploration
 
@@ -79,22 +77,17 @@ From the below plot we can observe that a total of 6680 images will be used to t
 
 ### Exploratory Visualization
 
-The study on distribution of data gives us the information on balance or imbalance in the data. If there is a imbalance in the data beyond a certain treshold, we must see that the data is balanced by adding relevant images. If the balance in the data is comparatively near to the treshold, it is good to carry forward with the operation. Let uss see how it works with our data in the below figure. The plot shows a clear descriotion on breed class with number of dogs.
+The study on the distribution of data gives us the information on balance or imbalance in the data. If there is an imbalance in the data beyond a certain threshold, we must see that the data is balanced by adding relevant images. If the balance in the data is comparatively near to the threshold, it is good to carry forward with the operation. Let us see how it works with our data in the below figure. The plot shows a clear description on breed class with the number of dogs.
 
 <p align="center"> 
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/download.png" />
 <p>
 
-On observing the distribution of data within each class, the number of images are beyond certain threshold value (i.e. nearly 40 per class). Though the data is not distributed evenly along the graph, the number of images are sufficient to predict the class of a particular breed and looks balanced.
+On observing the distribution of data within each class, the number of images is beyond a certain threshold value (i.e. nearly 40 per class). Though the data is not distributed evenly along the graph, the number of images is sufficient to predict the class of a particular breed and looks balanced.
 
-Provided the data is small, not sufficient and the model is getting to overfit. In such case, we need to augment the data to increase the number of image samples for the model. Therefore, augmentation makes an impact of bringing down the overfit condition and gives transparency to the model to make a predictive decision on test samples.
+Provided the data is small, not sufficient and the model is getting to overfit. In such a case, we need to augment the data to increase the number of image samples for the model. Therefore, augmentation makes an impact of bringing down the overfit condition and gives transparency to the model to make a predictive decision on test samples.
 
 ### Algorithms and Techniques
-
-In this section, you will need to discuss the algorithms and techniques you intend to use for solving the problem. You should justify the use of each one based on the characteristics of the problem and the problem domain. Questions to ask yourself when writing this section:
-- _Are the algorithms you will use, including any default variables/parameters in the project clearly defined?_
-- _Are the techniques to be used thoroughly discussed and justified?_
-- _Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?_
 
 From exploring the data, we visualize the actual distribution of data in each class. In order to classify the images based on their breeds, we need a classification algorithm to do the work. In this case, we use the pre-trained model such as VGG16 and a custom model for classification purpose. The intention of using the VGG16 is the need of performing transfer learning to our self built custom algorithm.
 
@@ -124,9 +117,9 @@ Based on the design of VGG16, we build our model on similar terms. In our model 
 - A pooling layer
 - Lastly the dropout layers
 
-In our algorithm we use the relu as the activation function and a pooling layer to reduce the dimension of the image data. In the first FCN there are 25088 channels which is converging to 133 in the third FCN. Where 133 belongs to the number of classes from the last fully connected network. We also have dropout layers in our model to make sure the model does not get into overfit condition.
+In our algorithm, we use the relu as the activation function and a pooling layer to reduce the dimension of the image data. In the first FCN, there are 25088 channels which are converging to 133 in the third FCN. Where 133 belongs to the number of classes from the last fully connected network. We also have dropout layers in our model to make sure the model does not get into overfit conditions.
 
-In order to evaluate the performance of the above model, we verify it trough transfer learning and compare with the other benchmark works carried before. The benchmark works carried out in this field is discussed in detail at the benchmark section below.
+In order to evaluate the performance of the above model, we verify it trough transfer learning and compare it with the other benchmark works carried before. The benchmark works carried out in this field is discussed in detail at the benchmark section below.
 
 ### Benchmark
 
@@ -136,10 +129,9 @@ In the works of Dog Identification in Kaggle, we see that "Mohamed Sheik Ibrahim
 
 Considering another work performed on the same data, using the inception v3, the pre-trained model for image classification, Carey B achieved an accuracy of 83%, which is considered to be a good classification rate based on the performance of the model. 
 
-Using the above understandings, We will be using VGG16 for our data for classifying the breeds of the Dogs, Later we build a Convolutional Neural Network and tune the parameters, Using transfer learning through these models, make a comparative study and analyse the performance of the model.
+Using the above understandings, We will be using VGG16 for our data for classifying the breeds of the Dogs, Later we build a Convolutional Neural Network and tune the parameters, Using transfer learning through these models, make a comparative study and analyze the performance of the model.
 
 ## III. Methodology
-_(approx. 3-5 pages)_
 
 ### Data Preprocessing
 
@@ -158,7 +150,7 @@ The metric of evaluation used to test the model's performance is accuracy. The d
 - The custom model should have a test accuracy greater than 10%
 - The model after the transfer learning should give a test accuracy greater than 60%
 
-As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification. The input image is resized to needed dimension of VGG16. Also, the image is center cropped to the required dimension in order keep the relevant information and discard the irrelevant ones.
+As we get the data ready from the previous stage based on the preprocessing methods, we need to build the algorithm for the implementation phase for the purpose of classification. The input image is resized to the needed dimension of VGG16. Also, the image is center cropped to the required dimension in order to keep the relevant information and discard the irrelevant ones.
 
 In our case, we are also normalizing the images to a certain range. The normalization is carried to reduce the skewness or varied range of dimensions of images to the fixed range in the model and also helping it to learn faster. Since we are using the color images which are having three channels, therefore we need a tuple to each channel to carry the normalization. We use the relevant normalization parameters as shown below.
 
@@ -172,7 +164,7 @@ image = (image - mean) / std
 
 #### Implementation of pre-defined model VGG-16:
 
-Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as the input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range from (151-268) belonging to the certain class. 
+Using the pre-defined model of VGG-16 as explained in the algorithm section, we used the preprocessed data as the input to the model to make the prediction. Once the prediction has been done, we see the resultant outcome from the model within a range from (151-268) belonging to a certain class. 
 
 The model is evlauated by passing a data of dog and it is seen that the model predicts the output in the given category i.e. 243, which lies in between 151-268. The respective predict function performed by the VGG16 is gven below:
 
@@ -199,28 +191,28 @@ The training data is augmented for the custom model using the augmentation techn
 
 The architecture for the custom model is built and implemented as under:
 
-- A total of 5 convolutional layers are used with a kernel size of 3 and padding equal to 1. The convolutional layers are necesseray to extract the low level features from the images.
-- The Max Pooling layers is used to downsize the spatial dimension, reduce the computations and remove the un-necessary information from the images.
-- 3 fully connected layers are used as decision making layers for classification purpose. They take in a total of 25088 features and downsize it to 133 classes of dog breeds
-- a single layer of dropout is used as to make sure the model is not getting overfitted on training it.
-- Setting the loss function to cross entropy and optimizer to Stochastic Gradient Descent 
+- A total of 5 convolutional layers are used with a kernel size of 3 and padding equal to 1. The convolutional layers are necessary to extract the low-level features from the images.
+- The Max Pooling layers are used to downsize the spatial dimension, reduce the computations and remove the unnecessary information from the images.
+- 3 fully connected layers are used as a decision making layers for classification purposes. They take in a total of 25088 features and downsize it to 133 classes of dog breeds
+- a single layer of dropout is used to make sure the model is not getting overfitted on training it.
+- Setting the loss function to cross-entropy and optimizer to Stochastic Gradient Descent 
 
-Therefore for every convolutional we have the pooling performed to downsize and also dropout for every fully connected layer to prevent the model from overfitting condition. From the lst Fully connected network we have output of 133 which is the class breeds of the dog.
+Therefore for every convolutional, we have the pooling performed to downsize and also dropout for every fully connected layer to prevent the model from overfitting condition. From the list Fully connected network we have an output of 133 which is the class breeds of the dog.
 
-The train function being designed plays a vital role to train the custom model for classification purpose. Within the train function we carry following operations:
+The train function being designed plays a vital role to train the custom model for classification purposes. Within the train function we carry the following operations:
 - make use of the GPU to carry the work at a much faster pace. 
 - evaluate the training loss
 - evaluate the validation loss
 
-Setting the parameters of the train function we will train the custom model using the training data of dog images. The epoch is set to 25 and the training is carried out on the custom model. We see there is a continuous drop in the loass till epoch 20. At the epoch 20 we see that the training loss is about 3.978901  and validation loss is about 3.993918. The training loss is less than the validation loss and leads to overfit condition of the model. 
+Setting the parameters of the train function we will train the custom model using the training data of dog images. The epoch is set to 25 and the training is carried out on the custom model. We see there is a continuous drop in the loss till epoch 20. At the epoch 20 we see that the training loss is about 3.978901  and validation loss is about 3.993918. The training loss is less than the validation loss and leads to overfitting condition of the model. 
 
-However, on tesing the model, we need to satidfy the pre-set consition of accuracy being more than 10%. In our case, on testing the data from the trained custom model, we acheive an accuracy of 12% of which 102 out of 836 are predicted right. Therefore, we satisfy the required condition of needed test accuracy.
+However, on testing the model, we need to satisfy the pre-set condition of accuracy being more than 10%. In our case, on testing the data from the trained custom model, we achieve an accuracy of 12% of which 102 out of 836 are predicted right. Therefore, we satisfy the required condition of the needed test accuracy.
 
 #### Implementation of Model for Transfer Learning
 
-Initially we are calling the pre-trained model of VGG-16 with the pre-trained weights. As the reason, the pre-trained parameters is set to True. We are also freezing the parameters i.e. weights of the VGG-16 model in lower convolutional layers and adding the custom model with a layer of trainable parameters as required. We set the last classifier layer with 4096 features and 133 as the number of classes as required as our output.
+Initially, we are calling the pre-trained model of VGG-16 with the pre-trained weights. As a reason, the pre-trained parameters is set to True. We are also freezing the parameters i.e. weights of the VGG-16 model in lower convolutional layers and adding the custom model with a layer of trainable parameters as required. We set the last classifier layer with 4096 features and 133 as the number of classes as required as our output.
 
-Also specifying the loss function to Cross Entropy and optimizer to Stochastic Gradient Descent, we are training the machine by making use of the cuda for training purpose. The parameter - epoch is set to 8 and the model is trained and we also observe there is a considerable decrease in the loss. Using the best validation accuracy of the model by saving it on training, we are testing our models performance on the test data. 
+Also specifying the loss function to Cross-Entropy and optimizer to Stochastic Gradient Descent, we are training the machine by making use of the cuda for training purposes. The parameter - epoch is set to 8 and the model is trained and we also observe there is a considerable decrease in the loss. Using the best validation accuracy of the model by saving it on training, we are testing our model's performance on the test data. 
 
 The result of the transfer learning model when evaluated on the testing data gives us an accuracy of about 85%. This satisfies the required condition set in prior.
 
@@ -230,47 +222,41 @@ To implement the application for dog breed prediction we are constructing a func
 
 The implementation of the function for predicting the dog breed contains:
 - loading the image path
-- pre-processing the images which is required to be passed as an input
-- using the model to evaluate on the image and make prediction
-- returm the result of predicted breed
+- pre-processing the images which are required to be passed as an input
+- using the model to evaluate the image and make a prediction
+- return the result of predicted breed
 
 The implementation of the function for running the application contains:
 - if the dog detected, using the prediction function designed, predict the breed of dog.
-- if the dog not detected and human detected, predict the dog breed for the human suing the previously designed fuction.
+- if the dog not detected and human detected, predict the dog breed for the human suing the previously designed function.
 - if neither dog nor human detected, throw a message displaying the error in the image
 
-Lastly the implemented algorithm is tested and evaluated for various images of human and dog. The resultant outcome is shown in the code output.
+Lastly, the implemented algorithm is tested and evaluated for various images of humans and dogs. The resultant outcome is shown in the code output.
 
 ---
 
 ### Refinement
-In this section, you will need to discuss the process of improvement you made upon the algorithms and techniques you used in your implementation. For example, adjusting parameters for certain models to acquire improved solutions would fall under the refinement category. Your initial and final solutions should be reported, as well as any significant intermediate results as necessary. Questions to ask yourself when writing this section:
-- _Has an initial solution been found and clearly reported?_
-- _Is the process of improvement clearly documented, such as what techniques were used?_
-- _Are intermediate and final solutions clearly reported as the process is improved?_
-In order to improve the performance of the model:
 
 Augmentation of the data:
 The images for the training data are augmented in order to increase the number of training images. This helps the model to distinguish data irrespective of the transformations done to the images.
 
 Tuning of the hyperparameters: Epoch size for custom model
-Initially the model was trained for 100 epochs and it was observed that the model was overly trained. Later, the model was trained for 15 epochs but the test accuracy of the model dropped below 10% and hence the epochs were reduced based on the tuning and set to 25 to which the condition was satisfied.
+Initially, the model was trained for 100 epochs and it was observed that the model was overly trained. Later, the model was trained for 15 epochs but the test accuracy of the model dropped below 10% and hence the epochs were reduced based on the tuning and set to 25 to which the condition was satisfied.
 
 Tuning of the hyperparameters: Epoch size for transfer learning model
-Following the same procedures above, the epoch was set to 5 initially but the resultant outcome of the model was not satisfactory amd later on tuning to various sizes, it was set to 8 and the resultant best accuracy was acheived.
+Following the same procedures above, the epoch was set to 5 initially but the resultant outcome of the model was not satisfactory and later on tuning to various sizes, it was set to 8 and the resultant best accuracy was achieved.
 
 The other parameters that were tuned for the better prediction of results are the dropout value and the learning rate. On tuning this, we observe that the model was much stable in prediction.
 
 ## IV. Results
-_(approx. 2-3 pages)_
 
-### Model Evaluation and Validation
-In this section, the final model and any supporting qualities should be evaluated in detail. It should be clear how the final model was derived and why this model was chosen. In addition, some type of analysis should be used to validate the robustness of this model and its solution, such as manipulating the input data or environment to see how the model’s solution is affected (this is called sensitivity analysis). Questions to ask yourself when writing this section:
-- _Is the final model reasonable and aligning with solution expectations? Are the final parameters of the model appropriate?_
-- _Has the final model been tested with various inputs to evaluate whether the model generalizes well to unseen data?_
-- _Is the model robust enough for the problem? Do small perturbations (changes) in training data or the input space greatly affect the results?_
-- _Can results found from the model be trusted?_
+In this section, we observe the performance evaluation and results of the final implemented model. Initially, we observe the study made on the detection algorithm and compared their results to see their behavior. On implementing the haar cascade and local binary pattern, we observe there were 98 faces detected for haar cascade and 95 faces in local binary pattern of human images. The results show the haar cascade has a better performance compared to the local binary pattern. 
 
+In the implementation phase of the pre-trained model VGG 16, we test the prediction of the model and we also observe that the results show the right prediction value of the dog. On implementing the custom Convolutional Neural Network model, we construct out the relative stack of layers required for our purpose and tune the necessary hyperparameters of the model. 
+
+On testing the performance of the custom model through the metric evaluation i.e. accuracy in our case, we observe that the results give us a result of 12% in terms of accuracy. The project had the condition to achieve the results of more than 10% accuracy. However, our model outperformed the required condition set and achieved an accuracy of 12% for the custom CNN model.
+
+After the implementation and training of the transfer learning model for a total of 8 epochs, we need to evaluate the performance of the given test data of dog images so that the model should predict the breed of the dog with utmost accuracy. Therefore, getting the model ready for evaluating the performance on the test data,  we used the test function that was previously defined for the custom model and evaluated the performance of the transfer learning model. We see that the model achieved an accuracy of 85% outperforming the pre-set condition of about 60%, we see that there is a considerable rise in the performance of the model after combining the predefined model with our custom model. 
 
 
 <p align="center"> 
@@ -281,37 +267,34 @@ In this section, the final model and any supporting qualities should be evaluate
 <p>
 
 ### Justification
-In this section, your model’s final solution and its results should be compared to the benchmark you established earlier in the project using some type of statistical analysis. You should also justify whether these results and the solution are significant enough to have solved the problem posed in the project. Questions to ask yourself when writing this section:
-- _Are the final results found stronger than the benchmark result reported earlier?_
-- _Have you thoroughly analyzed and discussed the final solution?_
-- _Is the final solution significant enough to have solved the problem?_
 
+Initially, we had discussed the works carried in this field and also observed the results achieved from these benchmark models. While one of the works has achieved an accuracy of 68% and other of about ana accuracy of 83%, our model achieved a result of 85% and outperformed the results achieved the mentioned benchmark models. 
+
+The results achieved are based on the analysis of our model's performance for the given data of the breed of dogs. It has justified the pre-defined conditions set forth in this project and also outperforms the benchmark model in terms of performance.
 
 ## V. Conclusion
-_(approx. 1-2 pages)_
 
-In this project, we see the implementation of Dog Breed Classification. The gives us a detailed description of how the classification of dogs based on their breeds are carried out and implemented. From the data we study and make an analysis on the split of data,type of data, distribution of data and also the visualization on how the data is distributed. Fromt the split, we see that the 80% of the data is used for training, 10% for validation and remaining 10% for the test data. From the visualization of data distribution, we see that though the data is not completely in balance, but the data in all the classes are above certain treshold and distributed evenly. We also make a comparative study of the detecting algorithms using haarcascad and local binary pattern. 
+In this project, we see the implementation of Dog Breed Classification. This gives us a detailed description of how the classification of dogs based on their breeds are carried out and implemented. From the data, we study and make an analysis of the split of data, type of data, distribution of data and also the visualization on how the data is distributed. From the split, we see that 80% of the data is used for training, 10% for validation and the remaining 10% for the test data. From the visualization of data distribution, we see that though the data is not completely in balance, but the data in all the classes are above a certain threshold and distributed evenly. We also make a comparative study of the detecting algorithms using haar cascade and local binary pattern. 
 
-In the prepreocessing phase, we see how the data has been preprocessed using resize, center crop and normalization. Selectively for training, we also observe the data augmentation been done using the transformation techniques to increase the dataset size for training purpose. 
+In the preprocessing phase, we see how the data has been preprocessed using resize, center crop and normalization. Selectively for training, we also observe the data augmentation been done using the transformation techniques to increase the dataset size for training purposes. 
 
-In the implementation phase, we implement the pre-trained model, custom model and transfer learning model. In the pre-trained model, we use the model to direcly make a prediction on the given data. Building our own custom model, we see that model is implemented using the convolutional architecture as shown in the implemenatation phase above. We also observe that the custom model gives us a test accuracy of 12% satisfying the required condition and also improvising on fine tuning the hyperparameters such as epochs, dropout value and learning rate. 
+In the implementation phase, we implement the pre-trained model, custom model and transfer learning model. In the pre-trained model, we use the model to directly make a prediction on the given data. Building our own custom model, we see that the model is implemented using the convolutional architecture as shown in the implementation phase above. We also observe that the custom model gives us a test accuracy of 12% satisfying the required condition and also improvising on fine-tuning the hyperparameters such as epochs, dropout value, and learning rate. 
 
-In the transfer learning, we see the involvement of custom model with the pre-defined model and training it for the whole data and see a significant rise in the accuracy level to an output of 85% in test accuracy. On making the comparative study with the benchmark model, we see our model has outperformed the benchmark and also satisfying the conditon of above 60% accuracy. 
-
+In the transfer learning, we see the involvement of a custom model with the pre-defined model and training it for the whole data and see a significant rise in the accuracy level to an output of 85% in test accuracy. On making the comparative study with the benchmark model, we see our model has outperformed the benchmark and also satisfying the condition of above 60% accuracy. However, by using the improvisation techniques, the model can be further improved in terms of evaluation and performance.
 
 ### Improvement
 
-Further, the project work can be improvised by using the follosing impovisations. 
+Further, the project work can be improvised by using the following improvisations. 
 
-- Firstly, an advanced detection algorithm can be used which are having better precision such as MTCNN face detection algorithm. 
+- Firstly, an advanced detection algorithm can be used which is having better precision such as the MTCNN face detection algorithm. 
 
-- Secondly, The task becomes much tedious and difficult to classify the images that contains both dogs and humans, therefore the alogorithm can be improvised on such dataset. 
+- Secondly, The task becomes much tedious and difficult to classify the images that contain both dogs and humans, therefore the algorithm can be improvised on such a dataset. 
 
-- Thirdly, a real-time application can be acheived on the production scale where when the user passes an input image, we can predict the put of the image in real time using the API. 
+- Thirdly, a real-time application can be achieved on the production scale where when the user passes an input image, we can predict the put of the image in real-time using the API. 
 
-- Fourthly, as the classification rate depends on the pre-trained models-preferring a better pre-trained model, will have a good chance in imporovising our prediction rate of the model. 
+- Fourthly, as the classification rate depends on the pre-trained models-preferring a better pre-trained model, will have a good chance of improvising our prediction rate of the model. 
 
-- Lastly, tuning the architectural factors can also be considered for the improvisation of model's performance.
+- Lastly, tuning architectural factors can also be considered for the improvisation of the model's performance.
 
 
 -----------

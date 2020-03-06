@@ -59,13 +59,24 @@ The evaluation metrics that can be used to evaluate the performance of the machi
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
 <p>
   
-In our case, we will be using the accuracy as the metric of measurement to evaluate the performance of the model.
+In our case, we will be using the accuracy as the metric of measurement to evaluate the performance of the model. 
+
+There are cases where the metrics such as accuracy might be misleading in the case of imbalance data. One such example is the fraudulent data in which we dealt in the earlier studies of this course. We have seen the percentage of fraud cases being drastically low compared to non fradulent cases in the data. However, in this data of dog breeds, as we observe in the visualization part, the data in each class is beyond certain threshold and looks ideally balanced to carry the classification work. Therfore, the accuracy can be used as the metric of evaluation in our work.
 
 ## II. Analysis
 
 ### Data Exploration
 
 Here, in the Dog Breed Classification, the dataset contains the images of Dogs and Humans. There are a total of 133 breeds, 8351 images for dogs. Using these images as data, it has to be processed according to our needs and a model has to be designed to train our machine.
+
+On making the analysis on the data, we see that the resolution of the images are not the same for all images of dogs in thier respective breeds. The images have a varied resolution and they need to be resampled based on the requirement of our model. Here are some expamples of the images discussed in terms of resolution:
+
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/r1.jpg" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/r2.jpg" />
+<p>
+
+The images shown as the examples above belong to the same breed of dog. The first image has a resolution of 762x768 and the second image has the resolution of about 700x525. We see that the resolution of the images are not the same for the given images. In such cases, we might need to resample our images based on the needs of the model before training it. 
 
 In our case, we observe that the split of train and test data is 90%-10%, i.e. 90% for training and 10% for testing purposes. In the training data, we have reserved another 10% for validation. The resultant split of data can be observed in the below graph.
 

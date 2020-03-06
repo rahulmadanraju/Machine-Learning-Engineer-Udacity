@@ -120,6 +120,34 @@ Some of the drawbacks of the VG166 are:
   - It is slow to train
   - The network architecture weights themselves are quite large
   
+#### Convolutional Neural Networks
+
+Convolutional Neural Network (CNN) is an algorithm from deep learning which is most commonly applied to visual imagery and are used for image processing, classification, detecion and image segmentation purposes. The convolutional neural netowrk takes in the image as input
+and gives the respective class of the image or probabilistic percentage of the class of the given input. The major advantage of CNN is requires very less pre-processing techniques. Also the feature engineering is done by passing a filter and carrying convolutional operations to obtain required features to train the model.
+
+Each convolutional layer contains a series of filters known as convolutional kernels. The filter is a matrix of integers that are used on a subset of the input pixel values, the same size as the kernel. Each pixel is multiplied by the corresponding value in the kernel, then the result is summed up for a single value for simplicity representing a grid cell, like a pixel, in the output channel/feature map.
+
+<p align="center"> >
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/cnn.png" />
+<p>
+
+There are various layers in the convolutional networks:
+ - Input layer: will hold the raw pixel values of the image,along with three color channel i.e. RGB
+ - Convolutional layer: This is the layer from which the features are extracted. It will compute the output of neurons that are connected to local regions to the input, carrying computation for each a dot product between their weights and a small region they are connected to in the input volume.
+ - Pooling layer: The layer that is used to downsample or reduce the dimensionality of the the number of images when the size of the data is relatively large. The pooling layers are of different types: i.e. Max pooling, Min pooling and Sum pooling.
+ - Fully connected layer: In this layer, the images are flattened and converted to column vector. The column vector is fed to a feed-forward neural network and backpropagation applied to every iteration of training helps the model to learn. Over a series of epochs, the model is able to distinguish between dominating and certain low-level features in images and classify them.
+ 
+ <p align="center"> >
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/cnn1.png" />
+<p>
+ 
+ In order ot get the best resultant outcome from the CNN model, we need to tune the neccessary hyperparameters which play a vital role to determine the models performance. Some of the hyperparameters based on the spatial and traing hyperparametes are:
+ 
+ - Number of convolutional layers: here we need to determin the reuired number of convolutional layers to perform convolutional operations on the images. So that the good amount of features are exracted from the images.
+ - Learning rate: a hyper-parameter that controls how much we are adjusting the weights of our network with respect the loss gradient.Tuning the learning rate enables us to achieve the best global optimum result from the model
+ - Epochs: epochs is the number of complete passes through the training dataset. The parameter enables us to determine the right amount of training required based on the error rates of the model.
+ - Dropout: is the regularization technique to avoid overfitting of the model.  The dropout is usually maintained between 20% - 50%. A probability too low has minimal effect and a value too high results in under-learning by the network.
+ 
 #### Custom Built Algorithm Model
  
 Based on the design of VGG16, we build our model on similar terms. In our model we have:
@@ -149,13 +177,12 @@ Using the above understandings, We will be using VGG16 for our data for classify
 In the pre-processing part we will be doing following:
 
 - As the size/resolution of the images remain different we need to resize the images to the same scale. Therefore, studying the input requirements of the VGG-16, we know that it requires an image of the size 224. As the reason we are resizing the images of the data to 255 along with a center crop of 224 as needed fr VGG16.
-- Also, as mentioned above, we will augment the data to increase the number of images. In data augmentation, we will be increasing the number of images through transformations of the image. The transformations such as rotation, translation, etc are performed so that the number of images are increased.
+
+- Also, as mentioned above, we will augment the data to increase the robustness of the model. In data augmentation, we will be increasing the robustness of the model through transformations of the image by rearranging information at different orientations. The transformations such as rotation, translation, etc are performed so that the the model is robust to classifiy the images having informations at different orientations.
+
+The training data is augmented for the custom model using the augmentation techniques such as rotation and flip. The rotation of image is made to certain angle of 10 degrees and images are flipped horizontally to increase the qulaity of robustness of the model to classify the images containing infomration at different orientations.
 
 ### Implementation
-In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
-- _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
-- _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
-- _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
 
 The metric of evaluation used to test the model's performance is accuracy. The determination of accuracy plays a huge role as we need to satisfy the pre-set conditions in prior. The conditions are as follows:
 - The custom model should have a test accuracy greater than 10%
@@ -185,7 +212,7 @@ The model is evlauated by passing a data of dog and it is seen that the model pr
   
 We see the implementation carried for a single data of dog. However we need to verify if the predicted output is correct. Therefore hte dog detector function created uses the VGG16 model to predict and test if the predicted answer is right or wrong. The function is implemented on 100 images of dog and human data. Based on the results we see that:
   
-  - Total number of dog faces detected in human data:  2
+  - Total number of dog faces detected in human data:  1
   - Total number of dog faces detected in dog data:  100
   
  The result shows that the function is carried in a proper sense to evaluate the predict function of VGG 16 as required for our purpose.
@@ -196,7 +223,7 @@ Keeping the pre-trained model ready, we now bulid our custom model as explained 
 
 As the data is split for train, validation and test. We need to load the respective data accordingly. Based on the requirement as mentioned above, we will augmenting the data in this case along with other preprocessing techniques. 
  
-The training data is augmented for the custom model using the augmentation techniques such as rotation and flip. The rotation of image is made to certain angle of 10 degrees and images are flipped horizontally to increase the number of images in the dataset for the training purpose. 
+The training data is augmented for the custom model using the augmentation techniques such as rotation and flip. The rotation of image is made to certain angle of 10 degrees and images are flipped horizontally to increase the qulaity of robustness of the model to classify the images containing infomration at different orientations.
 
 #### Implementation of Custom Model from Scratch:
 
@@ -317,3 +344,5 @@ https://discuss.pytorch.org/t/transfer-learning-using-vgg16/20653
 https://discuss.pytorch.org/t/questions-about-imagefolder/774/5
 
 https://towardsdatascience.com/a-beginners-tutorial-on-building-an-ai-image-classifier-using-pytorch-6f85cb69cba7
+
+https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148

@@ -55,8 +55,8 @@ The evaluation metrics that can be used to evaluate the performance of the machi
 - Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
 
 <p align="center"> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/CF.png" /> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/CF.png", width = 300 /> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png", width = 300 />
 <p>
   
 In our case, we will be using the accuracy as the metric of measurement to evaluate the performance of the model. 
@@ -72,8 +72,8 @@ Here, in the Dog Breed Classification, the dataset contains the images of Dogs a
 On making the analysis on the data, we see that the resolution of the images are not the same for all images of dogs in thier respective breeds. The images have a varied resolution and they need to be resampled based on the requirement of our model. Here are some expamples of the images discussed in terms of resolution:
 
 <p align="center"> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/r1.jpg" />
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/r2.jpg" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/images/r1.jpg", width = 300 />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/images/r2.jpg", width = 300 />
 <p>
 
 The images shown as the examples above belong to the same breed of dog. The first image has a resolution of 762x768 and the second image has the resolution of about 700x525. We see that the resolution of the images are not the same for the given images. In such cases, we might need to resample our images based on the needs of the model before training it. 

@@ -55,8 +55,8 @@ The evaluation metrics that can be used to evaluate the performance of the machi
 - Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
 
 <p align="center"> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/CF.png" /> 
-<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/CF.png", width = 300 /> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png", width = 300 />
 <p>
   
 In our case, we will be using the accuracy as the metric of measurement to evaluate the performance of the model. 

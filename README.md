@@ -80,5 +80,48 @@ This project will be broken down into three main notebooks:
 <img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pd.JPG" />
 <br>
 
+**Notebook 4: Capstone: Dog Breed Classification using Transfer Learning
+
+Confusion matrix:
+
+Recall: The ratio of true positives to the true positive and false negative (i.e. TP/(TP+FN))
+
+Precision: The ratio of true positives to the true positive and false positive (i.e. TP/(TP+FP))
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/CF.png" /> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Images/pre-rec.png" />
+<p>
+ 
+### Project Design
+ 
+The following project can be designed according to the below workflow.
+
+1. Data loading and exploration
+2. Data augmentation and processing
+3. Detect the Dog and Humans using the given detector algorithms
+4. Build a CNN training model from scratch using Deep Learning framework - Pytorch
+5. Build a training model using the Transfer Learning
+6. Evaluate the performance of the model
+7. Design and build an application using the above model for the user experience
+8. Test the working model of the application using user inputs
+
+The above steps are structured for the implementation of the project and any additional steps carried will be reported after the project implementation.
+
+## Results
+
+Detection algorithm comparison: Haarcascades vs Local Binary Pattern (LBP) cascades
+
+Pre-trained model: VGG 16
+
+Custom model accuracy: 12%
+
+The output meets the requirement of the task with a prediction accuracy of **85%**.
+
+The result of the above implementation is shown below - 
+<p align="center"> 
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/1.PNG" />
+<img src="https://github.com/rahulmadanraju/Machine-Learning-Engineer-Udacity/blob/master/Capstone_Project/Images_Report/2.PNG" />
+<p>
+
 ---
 

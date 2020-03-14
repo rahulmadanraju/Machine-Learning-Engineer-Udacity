@@ -40,7 +40,9 @@ This repository contains associated files for deploying ML models using AWS Sage
 * [Deploy a Custom PyTorch Model (Moon Data)](https://github.com/udacity/ML_SageMaker_Studies/tree/master/Moon_Data): Train and deploy a custom PyTorch neural network that classifies "moon" data; binary data distributed in moon-like shapes.
 * [Time Series Forecasting](https://github.com/udacity/ML_SageMaker_Studies/tree/master/Time_Series_Forecasting): Learn to analyze time series data and format it for training a [DeepAR](https://docs.aws.amazon.com/sagemaker/latest/dg/deepar.html) algorithm; a forecasting algorithm that utilizes a recurrent neural network. Train a model to predict household energy consumption patterns and evaluate the results.
 
-![Examples of dimensionality reduction and time series prediction](./Time_Series_Forecasting/notebook_ims/example_applications.png)
+<br>
+<img src="https://github.com/rahulmadanraju/ML_SageMaker_Studies/blob/master/Time_Series_Forecasting/notebook_ims/example_applications.png" />
+<br>
 
 ### Project 2 - Plagiarism Detection
 

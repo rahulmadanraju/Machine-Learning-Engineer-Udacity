@@ -1,5 +1,7 @@
 # Machine Learning Engineer - Udacity
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rahulmadanraju/Machine-Learning-Engineer-Udacity/HEAD)
+
 ## Syllabus
 
 <br>
